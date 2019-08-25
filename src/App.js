@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+
+import Navbar from './components/layout/Navbar/Navbar';
+import HomePage from './components/home-page/HomePage';
+import Dashboard from './components/dashboard/Dashboard';
+import QuoteDetails from './components/quotes/QuoteDetails';
+import CreateQuote from './components/quotes/CreateQuote';
+import SignIn from './components/auth/SignIn';
+import SignUp from './components/auth/SignUp';
+import ProtectedRoute from './components/auth/ProtectedRoute';
+import Pattern from './components/common/Pattern';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="app mx-auto flex flex-col h-screen">
+        <Pattern />
+        <Navbar />
+        <Switch>
+          <Route path="/" component={HomePage} exact />
+          <ProtectedRoute path="/dashboard" component={Dashboard} />
+          <Route path="/quote/:id" component={QuoteDetails} />
+          <ProtectedRoute path="/create-quote" component={CreateQuote} />
+          <Route path="/signin" component={SignIn} />
+          <Route path="/signup" component={SignUp} />
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 

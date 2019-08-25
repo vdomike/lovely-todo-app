@@ -1,0 +1,304 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* .quote-box {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+} */
+/* Form Page */
+.form-page {
+  @apply mx-auto rounded-lg w-1/2 p-6 shadow-list bg-beige;
+}
+.form-page-inner {
+  @apply px-16 py-4 rounded-lg;
+}
+.form-page-title {
+  @apply font-title text-6xl text-center;
+}
+.form-page-button {
+  @apply w-full rounded-lg mb-6 mt-16 font-title text-4xl border-4 overflow-hidden relative z-10;
+  transition: 0.5s;
+  position: relative;
+}
+.form-page-button span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+.create-quote .form-page-button span {
+  @apply bg-beige;
+}
+.sign-in .form-page-button span {
+  @apply bg-pink;
+}
+.sign-up .form-page-button span {
+  @apply bg-mintBlue;
+}
+.create-quote .form-page-button:hover {
+  @apply text-orange;
+}
+.sign-in .form-page-button:hover {
+  @apply text-white;
+}
+.sign-up .form-page-button:hover {
+  @apply text-pink;
+}
+.form-page-button:hover span {
+  transform: translateY(0) scale(2);
+}
+.form-page-button span:nth-child(1) {
+  --n: 1;
+}
+.form-page-button span:nth-child(2) {
+  --n: 2;
+}
+.form-page-button span:nth-child(3) {
+  --n: 3;
+}
+.form-page-button span:nth-child(4) {
+  --n: 4;
+}
+
+/* inputs */
+.input-field input,
+.textarea-field textarea {
+  font-family: 'Fredoka One', cursive;
+  width: 100%;
+  padding: 0 10px;
+  border-bottom: 2px solid #fff;
+  background-color: transparent;
+  font-size: 22px;
+  z-index: 99;
+  position: relative;
+}
+.create-quote input,
+.create-quote textarea {
+  color: #ffffff;
+}
+.sign-in input {
+  color: #ff9002;
+}
+.sign-up input {
+  color: #ffffff;
+}
+.input-field input {
+  height: 38px;
+}
+.textarea-field textarea {
+  height: 76px;
+  resize: none;
+}
+.create-quote input.white,
+.create-quote textarea.white {
+  background-color: #ff787f;
+}
+.sign-in input.white {
+  background-color: #cee4e2;
+}
+.sign-up input.white {
+  background-color: #ff9002;
+}
+.input-field label,
+.textarea-field label {
+  display: block;
+  width: 100%;
+  margin-top: 30px;
+  position: relative;
+}
+.input-field label {
+  height: 40px;
+}
+.textarea-field label {
+  height: 78px;
+}
+.input-field label span,
+.textarea-field label span {
+  width: 100%;
+  line-height: 38px;
+  position: absolute;
+  left: 0;
+  cursor: text;
+}
+.input-field label span {
+  height: 38px;
+}
+.textarea-field label span {
+  height: 76px;
+}
+.input-field label span:before,
+.textarea-field label span:before {
+  content: '';
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  transition: 0.3s;
+}
+.create-quote .input-field label span:before,
+.create-quote .textarea-field label span:before {
+  background-color: #ff9002;
+}
+.sign-in .input-field label span:before {
+  background-color: #ff9002;
+}
+.sign-up .input-field label span:before {
+  background-color: #ff787f;
+}
+.input-field label span:after,
+.textarea-field label span:after {
+  content: '';
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  transition: 0.3s;
+}
+.create-quote .input-field label span:after,
+.create-quote .textarea-field label span:after {
+  background-color: #ff9002;
+}
+.sign-in .input-field label span:after {
+  background-color: #ff9002;
+}
+.sign-up .input-field label span:after {
+  background-color: #ff787f;
+}
+.input-field label span span,
+.textarea-field label span span {
+  font-family: 'Fredoka One', cursive;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  font-size: 22px;
+  text-indent: 10px;
+  transition: 0.3s;
+}
+.create-quote .input-field label span span,
+.create-quote .textarea-field label span span {
+  color: #ffffff;
+}
+.sign-in .input-field label span span {
+  color: #ff9002;
+}
+.sign-up .input-field label span span {
+  color: #cee4e2;
+}
+.input-field input:focus + span:before,
+.input-field input:focus + span:after,
+.textarea-field textarea:focus + span:before,
+.textarea-field textarea:focus + span:after {
+  width: 50%;
+}
+.input-field input:focus + span span,
+.textarea-field textarea:focus + span span {
+  cursor: initial;
+  position: absolute;
+  font-size: 18px;
+  top: -35px;
+}
+.create-quote .input-field input:focus + span span,
+.create-quote .textarea-field textarea:focus + span span {
+  color: #ede8d5;
+}
+.sign-in .input-field input:focus + span span {
+  color: #ff787f;
+}
+
+/*Lists */
+.list {
+  @apply bg-beige p-6 rounded-lg shadow-list;
+}
+.list-input {
+  @apply border-b border-orange border-dotted bg-beige;
+}
+.list-title {
+  @apply font-title text-4xl text-orange;
+}
+
+.vote-button {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #ff787f;
+  position: relative;
+  color: #fff;
+  box-shadow: 0 2px 10px #ff787f;
+  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+}
+.vote-button:active {
+  transform: scale(0.9);
+  background-color: #ff626a;
+  box-shadow: 0 2px 10px rgba(255, 120, 127, 0.5);
+}
+.vote-button:before,
+.vote-button:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 140%;
+  height: 100%;
+  left: -20%;
+  /* z-index: -10; */
+  transition: all ease-in-out 0.5s;
+  background-repeat: no-repeat;
+}
+.vote-button:before {
+  display: none;
+  top: -75%;
+  background-image: radial-gradient(circle, #ff787f 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #ff787f 20%, transparent 30%),
+    radial-gradient(circle, #ff787f 20%, transparent 20%),
+    radial-gradient(circle, #ff787f 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff787f 15%, transparent 20%),
+    radial-gradient(circle, #ff787f 20%, transparent 20%),
+    radial-gradient(circle, #ff787f 20%, transparent 20%),
+    radial-gradient(circle, #ff787f 20%, transparent 20%),
+    radial-gradient(circle, #ff787f 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+}
+.vote-button:after {
+  display: none;
+  bottom: -75%;
+  background-image: radial-gradient(circle, #ff787f 20%, transparent 20%),
+    radial-gradient(circle, #ff787f 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff787f 15%, transparent 20%),
+    radial-gradient(circle, #ff787f 20%, transparent 20%),
+    radial-gradient(circle, #ff787f 20%, transparent 20%),
+    radial-gradient(circle, #ff787f 20%, transparent 20%),
+    radial-gradient(circle, #ff787f 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+.vote-button.animate:before {
+  display: block;
+  animation: topBubbles ease-in-out 0.75s forwards;
+}
+.vote-button.animate:after {
+  display: block;
+  animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+nav .curve {
+  bottom: -14px;
+}
