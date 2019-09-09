@@ -9,13 +9,11 @@ import CreateQuote from './components/quotes/CreateQuote';
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import ProtectedRoute from './components/auth/ProtectedRoute';
-import Pattern from './components/common/Pattern';
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="app mx-auto flex flex-col h-screen">
-        <Pattern />
+      <div className="app mx-auto flex flex-col min-h-screen">
         <Navbar />
         <Switch>
           <Route path="/" component={HomePage} exact />

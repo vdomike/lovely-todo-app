@@ -18,12 +18,9 @@ const SignedInLinks = ({ initials, signOut }) => {
         <button onClick={signOut}>Log out</button>
       </li>
       <li>
-        <NavLink
-          to="/"
-          className="block rounded-full w-12 h-12 flex items-center justify-center bg-white font-title text-3xl text-pink"
-        >
+        <div className="block rounded-full w-12 h-12 flex items-center justify-center bg-white font-title text-3xl text-pink">
           {initials}
-        </NavLink>
+        </div>
       </li>
     </ul>
   );

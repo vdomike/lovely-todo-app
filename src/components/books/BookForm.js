@@ -10,7 +10,7 @@ const BookForm = ({ title, author, handleChange, handleSubmit }) => {
         onChange={handleChange}
         value={title}
         placeholder="Title"
-        className="list-input p-1 mr-2 text-md"
+        className="list-input p-1 mr-3 text-md"
       />
       <input
         type="text"
@@ -18,9 +18,9 @@ const BookForm = ({ title, author, handleChange, handleSubmit }) => {
         onChange={handleChange}
         value={author}
         placeholder="Author"
-        className="list-input p-1 text-md"
+        className="list-input p-1 text-md mr-3"
       />
-      <button className="bg-pink px-1 text-white rounded-lg my-3">
+      <button className="bg-pink px-2 py-1 text-white rounded-lg my-3">
         Add Book
       </button>
     </form>

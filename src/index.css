@@ -5221,10 +5221,10 @@ video {
 }
 
 .inset-30 {
-  top: -30px;
-  right: -30px;
-  bottom: -30px;
-  left: -30px;
+  top: 30%;
+  right: 30%;
+  bottom: 30%;
+  left: 30%;
 }
 
 .inset-100 {
@@ -5241,6 +5241,20 @@ video {
   left: auto;
 }
 
+.-inset-30 {
+  top: -30%;
+  right: -30%;
+  bottom: -30%;
+  left: -30%;
+}
+
+.inset-2rem {
+  top: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  left: 2rem;
+}
+
 .inset-y-0 {
   top: 0;
   bottom: 0;
@@ -5252,13 +5266,13 @@ video {
 }
 
 .inset-y-30 {
-  top: -30px;
-  bottom: -30px;
+  top: 30%;
+  bottom: 30%;
 }
 
 .inset-x-30 {
-  right: -30px;
-  left: -30px;
+  right: 30%;
+  left: 30%;
 }
 
 .inset-y-100 {
@@ -5281,6 +5295,26 @@ video {
   left: auto;
 }
 
+.-inset-y-30 {
+  top: -30%;
+  bottom: -30%;
+}
+
+.-inset-x-30 {
+  right: -30%;
+  left: -30%;
+}
+
+.inset-y-2rem {
+  top: 2rem;
+  bottom: 2rem;
+}
+
+.inset-x-2rem {
+  right: 2rem;
+  left: 2rem;
+}
+
 .top-0 {
   top: 0;
 }
@@ -5298,19 +5332,19 @@ video {
 }
 
 .top-30 {
-  top: -30px;
+  top: 30%;
 }
 
 .right-30 {
-  right: -30px;
+  right: 30%;
 }
 
 .bottom-30 {
-  bottom: -30px;
+  bottom: 30%;
 }
 
 .left-30 {
-  left: -30px;
+  left: 30%;
 }
 
 .top-100 {
@@ -5343,6 +5377,38 @@ video {
 
 .left-auto {
   left: auto;
+}
+
+.-top-30 {
+  top: -30%;
+}
+
+.-right-30 {
+  right: -30%;
+}
+
+.-bottom-30 {
+  bottom: -30%;
+}
+
+.-left-30 {
+  left: -30%;
+}
+
+.top-2rem {
+  top: 2rem;
+}
+
+.right-2rem {
+  right: 2rem;
+}
+
+.bottom-2rem {
+  bottom: 2rem;
+}
+
+.left-2rem {
+  left: 2rem;
 }
 
 .resize-none {
@@ -6822,15 +6888,25 @@ video {
   z-index: -10;
 }
 
+.trans-fast {
+  transition: .15s;
+}
+
 button:focus,
 input:focus,
 textarea:focus {
   outline: none;
 }
 
-/* .quote-box {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-} */
+.app {
+  background: url('assets/img/bg-pattern.svg');
+}
+
+/* Nav menu */
+
+nav .curve {
+  bottom: -14px;
+}
 
 /* Form Page */
 
@@ -7112,17 +7188,18 @@ textarea:focus {
 /*Lists */
 
 .list {
-  background-color: #ede8d5;
   padding: 1.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  background-color: #fff;
+  background-image: linear-gradient(#eee 0.1em, transparent 0.1em);
+  background-size: 100% 1.2em;
 }
 
 .list-input {
   border-bottom-width: 1px;
   border-color: #ff9002;
   border-style: dotted;
-  background-color: #ede8d5;
 }
 
 .list-title {
@@ -7131,7 +7208,9 @@ textarea:focus {
   color: #ff9002;
 }
 
-.vote-button {
+/* Quote summary */
+
+/* .vote-button {
   width: 30px;
   height: 30px;
   line-height: 30px;
@@ -7143,68 +7222,12 @@ textarea:focus {
   color: #fff;
   box-shadow: 0 2px 10px #ff787f;
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-}
+} */
 
-.vote-button:active {
-  transform: scale(0.9);
-  background-color: #ff626a;
-  box-shadow: 0 2px 10px rgba(255, 120, 127, 0.5);
-}
+/* Quote details page */
 
-.vote-button:before,
-.vote-button:after {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 140%;
-  height: 100%;
-  left: -20%;
-  /* z-index: -10; */
-  transition: all ease-in-out 0.5s;
-  background-repeat: no-repeat;
-}
-
-.vote-button:before {
-  display: none;
-  top: -75%;
-  background-image: radial-gradient(circle, #ff787f 20%, transparent 20%),
-    radial-gradient(circle, transparent 20%, #ff787f 20%, transparent 30%),
-    radial-gradient(circle, #ff787f 20%, transparent 20%),
-    radial-gradient(circle, #ff787f 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, #ff787f 15%, transparent 20%),
-    radial-gradient(circle, #ff787f 20%, transparent 20%),
-    radial-gradient(circle, #ff787f 20%, transparent 20%),
-    radial-gradient(circle, #ff787f 20%, transparent 20%),
-    radial-gradient(circle, #ff787f 20%, transparent 20%);
-  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
-    10% 10%, 18% 18%;
-}
-
-.vote-button:after {
-  display: none;
-  bottom: -75%;
-  background-image: radial-gradient(circle, #ff787f 20%, transparent 20%),
-    radial-gradient(circle, #ff787f 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, #ff787f 15%, transparent 20%),
-    radial-gradient(circle, #ff787f 20%, transparent 20%),
-    radial-gradient(circle, #ff787f 20%, transparent 20%),
-    radial-gradient(circle, #ff787f 20%, transparent 20%),
-    radial-gradient(circle, #ff787f 20%, transparent 20%);
-  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
-}
-
-.vote-button.animate:before {
-  display: block;
-  animation: topBubbles ease-in-out 0.75s forwards;
-}
-
-.vote-button.animate:after {
-  display: block;
-  animation: bottomBubbles ease-in-out 0.75s forwards;
-}
-
-nav .curve {
-  bottom: -14px;
+.quote-content {
+  text-indent: 2rem;
 }
 
 @media (min-width: 640px) {
@@ -11827,10 +11850,10 @@ nav .curve {
   }
 
   .sm\:inset-30 {
-    top: -30px;
-    right: -30px;
-    bottom: -30px;
-    left: -30px;
+    top: 30%;
+    right: 30%;
+    bottom: 30%;
+    left: 30%;
   }
 
   .sm\:inset-100 {
@@ -11847,6 +11870,20 @@ nav .curve {
     left: auto;
   }
 
+  .sm\:-inset-30 {
+    top: -30%;
+    right: -30%;
+    bottom: -30%;
+    left: -30%;
+  }
+
+  .sm\:inset-2rem {
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
   .sm\:inset-y-0 {
     top: 0;
     bottom: 0;
@@ -11858,13 +11895,13 @@ nav .curve {
   }
 
   .sm\:inset-y-30 {
-    top: -30px;
-    bottom: -30px;
+    top: 30%;
+    bottom: 30%;
   }
 
   .sm\:inset-x-30 {
-    right: -30px;
-    left: -30px;
+    right: 30%;
+    left: 30%;
   }
 
   .sm\:inset-y-100 {
@@ -11887,6 +11924,26 @@ nav .curve {
     left: auto;
   }
 
+  .sm\:-inset-y-30 {
+    top: -30%;
+    bottom: -30%;
+  }
+
+  .sm\:-inset-x-30 {
+    right: -30%;
+    left: -30%;
+  }
+
+  .sm\:inset-y-2rem {
+    top: 2rem;
+    bottom: 2rem;
+  }
+
+  .sm\:inset-x-2rem {
+    right: 2rem;
+    left: 2rem;
+  }
+
   .sm\:top-0 {
     top: 0;
   }
@@ -11904,19 +11961,19 @@ nav .curve {
   }
 
   .sm\:top-30 {
-    top: -30px;
+    top: 30%;
   }
 
   .sm\:right-30 {
-    right: -30px;
+    right: 30%;
   }
 
   .sm\:bottom-30 {
-    bottom: -30px;
+    bottom: 30%;
   }
 
   .sm\:left-30 {
-    left: -30px;
+    left: 30%;
   }
 
   .sm\:top-100 {
@@ -11949,6 +12006,38 @@ nav .curve {
 
   .sm\:left-auto {
     left: auto;
+  }
+
+  .sm\:-top-30 {
+    top: -30%;
+  }
+
+  .sm\:-right-30 {
+    right: -30%;
+  }
+
+  .sm\:-bottom-30 {
+    bottom: -30%;
+  }
+
+  .sm\:-left-30 {
+    left: -30%;
+  }
+
+  .sm\:top-2rem {
+    top: 2rem;
+  }
+
+  .sm\:right-2rem {
+    right: 2rem;
+  }
+
+  .sm\:bottom-2rem {
+    bottom: 2rem;
+  }
+
+  .sm\:left-2rem {
+    left: 2rem;
   }
 
   .sm\:resize-none {
@@ -18049,10 +18138,10 @@ nav .curve {
   }
 
   .md\:inset-30 {
-    top: -30px;
-    right: -30px;
-    bottom: -30px;
-    left: -30px;
+    top: 30%;
+    right: 30%;
+    bottom: 30%;
+    left: 30%;
   }
 
   .md\:inset-100 {
@@ -18069,6 +18158,20 @@ nav .curve {
     left: auto;
   }
 
+  .md\:-inset-30 {
+    top: -30%;
+    right: -30%;
+    bottom: -30%;
+    left: -30%;
+  }
+
+  .md\:inset-2rem {
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
   .md\:inset-y-0 {
     top: 0;
     bottom: 0;
@@ -18080,13 +18183,13 @@ nav .curve {
   }
 
   .md\:inset-y-30 {
-    top: -30px;
-    bottom: -30px;
+    top: 30%;
+    bottom: 30%;
   }
 
   .md\:inset-x-30 {
-    right: -30px;
-    left: -30px;
+    right: 30%;
+    left: 30%;
   }
 
   .md\:inset-y-100 {
@@ -18109,6 +18212,26 @@ nav .curve {
     left: auto;
   }
 
+  .md\:-inset-y-30 {
+    top: -30%;
+    bottom: -30%;
+  }
+
+  .md\:-inset-x-30 {
+    right: -30%;
+    left: -30%;
+  }
+
+  .md\:inset-y-2rem {
+    top: 2rem;
+    bottom: 2rem;
+  }
+
+  .md\:inset-x-2rem {
+    right: 2rem;
+    left: 2rem;
+  }
+
   .md\:top-0 {
     top: 0;
   }
@@ -18126,19 +18249,19 @@ nav .curve {
   }
 
   .md\:top-30 {
-    top: -30px;
+    top: 30%;
   }
 
   .md\:right-30 {
-    right: -30px;
+    right: 30%;
   }
 
   .md\:bottom-30 {
-    bottom: -30px;
+    bottom: 30%;
   }
 
   .md\:left-30 {
-    left: -30px;
+    left: 30%;
   }
 
   .md\:top-100 {
@@ -18171,6 +18294,38 @@ nav .curve {
 
   .md\:left-auto {
     left: auto;
+  }
+
+  .md\:-top-30 {
+    top: -30%;
+  }
+
+  .md\:-right-30 {
+    right: -30%;
+  }
+
+  .md\:-bottom-30 {
+    bottom: -30%;
+  }
+
+  .md\:-left-30 {
+    left: -30%;
+  }
+
+  .md\:top-2rem {
+    top: 2rem;
+  }
+
+  .md\:right-2rem {
+    right: 2rem;
+  }
+
+  .md\:bottom-2rem {
+    bottom: 2rem;
+  }
+
+  .md\:left-2rem {
+    left: 2rem;
   }
 
   .md\:resize-none {
@@ -24271,10 +24426,10 @@ nav .curve {
   }
 
   .lg\:inset-30 {
-    top: -30px;
-    right: -30px;
-    bottom: -30px;
-    left: -30px;
+    top: 30%;
+    right: 30%;
+    bottom: 30%;
+    left: 30%;
   }
 
   .lg\:inset-100 {
@@ -24291,6 +24446,20 @@ nav .curve {
     left: auto;
   }
 
+  .lg\:-inset-30 {
+    top: -30%;
+    right: -30%;
+    bottom: -30%;
+    left: -30%;
+  }
+
+  .lg\:inset-2rem {
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
   .lg\:inset-y-0 {
     top: 0;
     bottom: 0;
@@ -24302,13 +24471,13 @@ nav .curve {
   }
 
   .lg\:inset-y-30 {
-    top: -30px;
-    bottom: -30px;
+    top: 30%;
+    bottom: 30%;
   }
 
   .lg\:inset-x-30 {
-    right: -30px;
-    left: -30px;
+    right: 30%;
+    left: 30%;
   }
 
   .lg\:inset-y-100 {
@@ -24331,6 +24500,26 @@ nav .curve {
     left: auto;
   }
 
+  .lg\:-inset-y-30 {
+    top: -30%;
+    bottom: -30%;
+  }
+
+  .lg\:-inset-x-30 {
+    right: -30%;
+    left: -30%;
+  }
+
+  .lg\:inset-y-2rem {
+    top: 2rem;
+    bottom: 2rem;
+  }
+
+  .lg\:inset-x-2rem {
+    right: 2rem;
+    left: 2rem;
+  }
+
   .lg\:top-0 {
     top: 0;
   }
@@ -24348,19 +24537,19 @@ nav .curve {
   }
 
   .lg\:top-30 {
-    top: -30px;
+    top: 30%;
   }
 
   .lg\:right-30 {
-    right: -30px;
+    right: 30%;
   }
 
   .lg\:bottom-30 {
-    bottom: -30px;
+    bottom: 30%;
   }
 
   .lg\:left-30 {
-    left: -30px;
+    left: 30%;
   }
 
   .lg\:top-100 {
@@ -24393,6 +24582,38 @@ nav .curve {
 
   .lg\:left-auto {
     left: auto;
+  }
+
+  .lg\:-top-30 {
+    top: -30%;
+  }
+
+  .lg\:-right-30 {
+    right: -30%;
+  }
+
+  .lg\:-bottom-30 {
+    bottom: -30%;
+  }
+
+  .lg\:-left-30 {
+    left: -30%;
+  }
+
+  .lg\:top-2rem {
+    top: 2rem;
+  }
+
+  .lg\:right-2rem {
+    right: 2rem;
+  }
+
+  .lg\:bottom-2rem {
+    bottom: 2rem;
+  }
+
+  .lg\:left-2rem {
+    left: 2rem;
   }
 
   .lg\:resize-none {
@@ -30493,10 +30714,10 @@ nav .curve {
   }
 
   .xl\:inset-30 {
-    top: -30px;
-    right: -30px;
-    bottom: -30px;
-    left: -30px;
+    top: 30%;
+    right: 30%;
+    bottom: 30%;
+    left: 30%;
   }
 
   .xl\:inset-100 {
@@ -30513,6 +30734,20 @@ nav .curve {
     left: auto;
   }
 
+  .xl\:-inset-30 {
+    top: -30%;
+    right: -30%;
+    bottom: -30%;
+    left: -30%;
+  }
+
+  .xl\:inset-2rem {
+    top: 2rem;
+    right: 2rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+
   .xl\:inset-y-0 {
     top: 0;
     bottom: 0;
@@ -30524,13 +30759,13 @@ nav .curve {
   }
 
   .xl\:inset-y-30 {
-    top: -30px;
-    bottom: -30px;
+    top: 30%;
+    bottom: 30%;
   }
 
   .xl\:inset-x-30 {
-    right: -30px;
-    left: -30px;
+    right: 30%;
+    left: 30%;
   }
 
   .xl\:inset-y-100 {
@@ -30553,6 +30788,26 @@ nav .curve {
     left: auto;
   }
 
+  .xl\:-inset-y-30 {
+    top: -30%;
+    bottom: -30%;
+  }
+
+  .xl\:-inset-x-30 {
+    right: -30%;
+    left: -30%;
+  }
+
+  .xl\:inset-y-2rem {
+    top: 2rem;
+    bottom: 2rem;
+  }
+
+  .xl\:inset-x-2rem {
+    right: 2rem;
+    left: 2rem;
+  }
+
   .xl\:top-0 {
     top: 0;
   }
@@ -30570,19 +30825,19 @@ nav .curve {
   }
 
   .xl\:top-30 {
-    top: -30px;
+    top: 30%;
   }
 
   .xl\:right-30 {
-    right: -30px;
+    right: 30%;
   }
 
   .xl\:bottom-30 {
-    bottom: -30px;
+    bottom: 30%;
   }
 
   .xl\:left-30 {
-    left: -30px;
+    left: 30%;
   }
 
   .xl\:top-100 {
@@ -30615,6 +30870,38 @@ nav .curve {
 
   .xl\:left-auto {
     left: auto;
+  }
+
+  .xl\:-top-30 {
+    top: -30%;
+  }
+
+  .xl\:-right-30 {
+    right: -30%;
+  }
+
+  .xl\:-bottom-30 {
+    bottom: -30%;
+  }
+
+  .xl\:-left-30 {
+    left: -30%;
+  }
+
+  .xl\:top-2rem {
+    top: 2rem;
+  }
+
+  .xl\:right-2rem {
+    right: 2rem;
+  }
+
+  .xl\:bottom-2rem {
+    bottom: 2rem;
+  }
+
+  .xl\:left-2rem {
+    left: 2rem;
   }
 
   .xl\:resize-none {

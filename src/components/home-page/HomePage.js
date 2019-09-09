@@ -25,7 +25,7 @@ class HomePage extends Component {
             <p>
               This is the perfect place to keep lists of your todos and books
               you plan to read. Special feature - sharing great quotes and
-              voting. It's interesting and fun.
+              voting for them.
             </p>
             <p>
               Just{' '}

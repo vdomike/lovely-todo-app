@@ -28,7 +28,8 @@ module.exports = {
       inset: {
         '100': '100%',
         '30': '30%',
-        '30': '-30px'
+        '-30': '-30%',
+        '2rem': '2rem'
       },
       zIndex: {
         '-10': '-10'
@@ -36,5 +37,14 @@ module.exports = {
     }
   },
   variants: {},
-  plugins: []
+  plugins: [
+    function({ addUtilities }) {
+      const newUtilities = {
+        '.trans-fast': {
+          transition: '.15s'
+        }
+      };
+      addUtilities(newUtilities);
+    }
+  ]
 };

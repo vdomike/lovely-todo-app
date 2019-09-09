@@ -31,29 +31,47 @@ class QuoteDetails extends Component {
         votes
       } = quote;
       return (
-        <div className="qoute-details p-6 container mx-auto my-8 bg-beige flex-grow">
-          <div className="quote-content w-1/2 bg-white rounded-lg p-6 mx-auto">
-            <div className="quote">{content}</div>
-            <div className="author">{author}</div>
-            <div className="posted-by">
-              Posted by {userFirstName} {userLastName}
-              <time>{moment(createdAt.toDate()).calendar()}</time>
-            </div>
-            <div className="vote flex">
-              <i
-                className="fas fa-minus-circle"
-                onClick={() => this.voteQuote('sub')}
-              />
-              <div className="votes">{votes}</div>
-              <i
-                className="fas fa-plus vote-button"
-                onClick={() => this.voteQuote('add')}
-              />
-            </div>
-            <i
-              className="fas fa-trash cursor-pointer"
-              onClick={() => deleteQuote(id)}
-            />
+        <div className="qoute-details p-6 container mx-auto my-8 flex-grow">
+          <div className="shadow-section bg-white w-3/4 mx-auto p-4 rounded-lg">
+            <blockquote className="bg-beige p-8 rounded-lg">
+              <p className="quote-content font-semibold text-2xl mt-4 mb-8">
+                {content}
+              </p>
+              <div className="quote-footer flex justify-between">
+                <div>
+                  <p className="quote-author font-main text-pink text-xl">
+                    {author}
+                  </p>
+                  <p className="font-title text-2xl">
+                    Posted by {userFirstName} {userLastName}{' '}
+                    <time>{moment(createdAt.toDate()).calendar()}</time>
+                  </p>
+                </div>
+                <div className="vote flex">
+                  <div className="votes text-5xl font-title">
+                    <button
+                      className="text-pink mr-2"
+                      onClick={() => this.voteQuote('sub')}
+                    >
+                      &#45;
+                    </button>
+                    <span className="text-orange">{votes} votes</span>
+                    <button
+                      className="text-pink ml-2"
+                      onClick={() => this.voteQuote('add')}
+                    >
+                      &#43;
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="right-2rem opacity-50">
+                <i
+                  className="fas fa-trash cursor-pointer"
+                  onClick={() => deleteQuote(id)}
+                />
+              </div>
+            </blockquote>
           </div>
         </div>
       );
