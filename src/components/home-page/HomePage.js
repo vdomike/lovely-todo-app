@@ -5,6 +5,7 @@ import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 
 import BestQuote from '../quotes/BestQuote';
+import SplittedWord from '../common/SplittedWord';
 
 class HomePage extends Component {
   render() {
@@ -29,8 +30,11 @@ class HomePage extends Component {
             </p>
             <p>
               Just{' '}
-              <Link to={tryLink} className="text-pink">
-                try it out!
+              <Link
+                to={tryLink}
+                className="text-pink floating-text bouncing-text"
+              >
+                <SplittedWord word="try it out!" />
               </Link>
             </p>
           </h1>

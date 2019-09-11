@@ -20,7 +20,7 @@ const BookForm = ({ title, author, handleChange, handleSubmit }) => {
         placeholder="Author"
         className="list-input p-1 text-md mr-3"
       />
-      <button className="bg-pink px-2 py-1 text-white rounded-lg my-3">
+      <button className="shining bg-pink px-2 py-1 text-white rounded-lg my-3">
         Add Book
       </button>
     </form>

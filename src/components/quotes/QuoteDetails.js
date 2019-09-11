@@ -4,6 +4,7 @@ import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
 import moment from 'moment';
 
+import Tooltip from '../common/Tooltip';
 import { deleteQuote, voteQuote } from '../../store/actions/actionQuotes';
 
 class QuoteDetails extends Component {
@@ -49,28 +50,34 @@ class QuoteDetails extends Component {
                 </div>
                 <div className="vote flex">
                   <div className="votes text-5xl font-title">
-                    <button
-                      className="text-pink mr-2"
-                      onClick={() => this.voteQuote('sub')}
-                    >
-                      &#45;
-                    </button>
+                    <Tooltip text="Dislike it">
+                      <button
+                        className="text-pink mr-2"
+                        onClick={() => this.voteQuote('sub')}
+                      >
+                        &#45;
+                      </button>
+                    </Tooltip>
                     <span className="text-orange">{votes} votes</span>
-                    <button
-                      className="text-pink ml-2"
-                      onClick={() => this.voteQuote('add')}
-                    >
-                      &#43;
-                    </button>
+                    <Tooltip text="Like it">
+                      <button
+                        className="text-pink ml-2"
+                        onClick={() => this.voteQuote('add')}
+                      >
+                        &#43;
+                      </button>
+                    </Tooltip>
                   </div>
                 </div>
               </div>
-              <div className="right-2rem opacity-50">
-                <i
-                  className="fas fa-trash cursor-pointer"
-                  onClick={() => deleteQuote(id)}
-                />
-              </div>
+              <Tooltip text="delete quote">
+                <div className="right-2rem opacity-50">
+                  <i
+                    className="fas fa-trash cursor-pointer"
+                    onClick={() => deleteQuote(id)}
+                  />
+                </div>
+              </Tooltip>
             </blockquote>
           </div>
         </div>
