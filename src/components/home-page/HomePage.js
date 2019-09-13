@@ -15,7 +15,7 @@ class HomePage extends Component {
     } = this.props;
     const tryLink = uid ? '/dashboard' : '/signup';
     return (
-      <div className="p-6 w-1/2 mx-auto my-8 shadow-list bg-beige rounded-lg">
+      <div className="p-6 sm:w-3/4 lg:w-3/5 xl:w-1/2 mx-auto my-8 shadow-list bg-beige rounded-lg">
         <div className="homepage flex-grow flex flex-col justify-center items-center bg-white rounded-lg p-6">
           <h1 className="text-center mb-8 text-orange text-2xl font-main">
             Welcome to our{' '}

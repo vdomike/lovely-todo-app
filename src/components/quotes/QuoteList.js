@@ -10,7 +10,7 @@ class QuoteList extends Component {
     const { quotes } = this.props;
     const isQuoteExists = quotes && quotes.length > 0;
     return (
-      <div className="list ml-6 h-full">
+      <div className="list h-full">
         <h1 className="list-title">Quotes</h1>
         {isQuoteExists &&
           quotes.map(quote => <QuoteSummary key={quote.id} quote={quote} />)}

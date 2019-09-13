@@ -32,23 +32,23 @@ class QuoteDetails extends Component {
         votes
       } = quote;
       return (
-        <div className="qoute-details p-6 container mx-auto my-8 flex-grow">
-          <div className="shadow-section bg-white w-3/4 mx-auto p-4 rounded-lg">
+        <div className="qoute-details container mt-10 mx-auto flex-grow">
+          <div className="shadow-section bg-white w-full sm:w-3/4 mx-auto p-4 rounded-lg">
             <blockquote className="bg-beige p-8 rounded-lg">
-              <p className="quote-content font-semibold text-2xl mt-4 mb-8">
+              <p className="quote-content font-semibold text-xl sm:text-2xl text-center mt-4 mb-8">
                 {content}
               </p>
-              <div className="quote-footer flex justify-between">
+              <div className="quote-footer flex flex-col justify-between">
                 <div>
-                  <p className="quote-author font-main text-pink text-xl">
+                  <p className="quote-author font-main text-pink text-center text-xl">
                     {author}
                   </p>
-                  <p className="font-title text-2xl">
+                  <p className="font-title text-2xl text-center">
                     Posted by {userFirstName} {userLastName}{' '}
                     <time>{moment(createdAt.toDate()).calendar()}</time>
                   </p>
                 </div>
-                <div className="vote flex">
+                <div className="vote flex justify-center">
                   <div className="votes text-5xl font-title">
                     <Tooltip text="Dislike it">
                       <button
@@ -70,14 +70,16 @@ class QuoteDetails extends Component {
                   </div>
                 </div>
               </div>
-              <Tooltip text="delete quote">
-                <div className="right-2rem opacity-50">
-                  <i
-                    className="fas fa-trash cursor-pointer"
-                    onClick={() => deleteQuote(id)}
-                  />
-                </div>
-              </Tooltip>
+              <div className="text-center">
+                <Tooltip text="delete quote">
+                  <div className="right-2rem">
+                    <i
+                      className="fas fa-trash cursor-pointer"
+                      onClick={() => deleteQuote(id)}
+                    />
+                  </div>
+                </Tooltip>
+              </div>
             </blockquote>
           </div>
         </div>

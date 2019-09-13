@@ -15,8 +15,8 @@ const Navbar = ({ auth: { uid }, profile: { firstName, lastName } }) => {
     <SignedOutLinks />
   );
   return (
-    <nav className="bg-pink font-main p-4 relative">
-      <svg className="absolute left-0 curve" width="100%" height="29.8">
+    <nav className="bg-pink font-main p-4 relative h-20 md:h-auto">
+      <svg className="absolute left-0 curve z-10" width="100%" height="29.8">
         <defs>
           <pattern
             width="53"
@@ -33,11 +33,15 @@ const Navbar = ({ auth: { uid }, profile: { firstName, lastName } }) => {
         </defs>
         <rect fill="url(#curve)" width="100%" height="29.8" />
       </svg>
-      <div className="flex justify-between items-center container mx-auto">
-        <div className="brand-logo text-3xl text-white">
+      <div className="absolute z-20 top-0 left-0 right-0 md:static flex justify-between items-center mx-auto">
+        <div className="hidden md:block brand-logo text-3xl text-white">
           <Link to="/">Girl's Todo App</Link>
         </div>
-        {links}
+        <div className="mobile-menu-toggle relative w-full md:w-auto h-full md:h-auto">
+          <input type="checkbox" id="mobile-toggle" />
+          <label htmlFor="mobile-toggle" className="md:hidden" />
+          {links}
+        </div>
       </div>
     </nav>
   );
