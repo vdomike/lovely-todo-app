@@ -25,5 +25,5 @@ const mapStateToProps = state => {
 
 export default compose(
   connect(mapStateToProps),
-  firestoreConnect([{ collection: 'quotes' }])
+  firestoreConnect([{ collection: 'quotes', orderBy: ['createdAt', 'desc'] }])
 )(QuoteList);
