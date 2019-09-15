@@ -39,7 +39,7 @@ class BookList extends Component {
     const { books, deleteBook, readBook } = this.props;
     const isBookExists = books && books.length > 0;
     return (
-      <div className="list flex-1">
+      <div className="list flex-1 max-h-1/2 overflow-y-auto">
         <h1 className="list-title">Book List</h1>
         <BookForm
           title={title}

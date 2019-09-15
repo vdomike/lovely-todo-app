@@ -1,5 +1,3 @@
-// import { ADD_TODO } from '../constants';
-
 export const addTodo = todo => {
   return (dispatch, getState, { getFirestore }) => {
     const firestore = getFirestore();
@@ -8,9 +6,6 @@ export const addTodo = todo => {
       ...todo,
       userId: userId
     });
-    // .then(() => {
-    //   dispatch({ type: ADD_TODO, todo });
-    // });
   };
 };
 

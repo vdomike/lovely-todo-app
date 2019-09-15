@@ -1,5 +1,3 @@
-// import { ADD_QUOTE, ADD_QUOTE_ERROR } from '../constants';
-
 export const addQuote = quote => {
   return (dispatch, getState, { getFirestore }) => {
     const firestore = getFirestore();
@@ -12,12 +10,6 @@ export const addQuote = quote => {
       createdAt: new Date(),
       userId: userId
     });
-    // .then(() => {
-    //   dispatch({ type: ADD_QUOTE, quote });
-    // })
-    // .catch(error => {
-    //   dispatch({ type: ADD_QUOTE_ERROR, error });
-    // });
   };
 };
 

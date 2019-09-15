@@ -6,7 +6,7 @@ const QuoteSummary = ({
   quote: { id, content, author, postedBy, createdAt, votes }
 }) => {
   return (
-    <Link to={`quote/${id}`}>
+    <Link to={`quotes/${id}`}>
       <div className="quote-card shadow-inner bg-white rounded-lg py-4 px-6 mb-4">
         <div className="quote mb-4">{content}</div>
         <hr className="border-b border-pink" />

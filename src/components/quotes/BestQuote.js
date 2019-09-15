@@ -13,7 +13,7 @@ const BestQuote = ({ quote: { id, content, author, votes } }) => {
         </h2>
         <Bubble shape={3} height="100px" color="#ff9002" />
       </header>
-      <Link to={`quote/${id}`} className="block h-full">
+      <Link to={`quotes/${id}`} className="block h-full">
         <blockquote className="shadow-section bg-mintBlue mx-auto rounded-lg p-6 mt-16">
           <i className="fas fa-quote-left text-4xl mt-4 sm:text-5xl text-pink" />
           <p className="quote-text text-xl sm:text-2xl mt-4 opacity-25 text-justify sm:text-left">

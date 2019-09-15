@@ -18,7 +18,7 @@ function App() {
         <Switch>
           <Route path="/" component={HomePage} exact />
           <ProtectedRoute path="/dashboard" component={Dashboard} />
-          <Route path="/quote/:id" component={QuoteDetails} />
+          <Route path="/quotes/:id" component={QuoteDetails} />
           <ProtectedRoute path="/create-quote" component={CreateQuote} />
           <Route path="/signin" component={SignIn} />
           <Route path="/signup" component={SignUp} />

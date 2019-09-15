@@ -7,8 +7,8 @@ import QuoteList from '../quotes/QuoteList';
 class Dashboard extends Component {
   render() {
     return (
-      <div className="dashboard flex flex-col sm:flex-row p-6 bg-beige container mx-auto flex-grow">
-        <div className="w-full sm:w-1/2 flex flex-col">
+      <div className="dashboard flex flex-col sm:flex-row p-6 bg-beige container mx-auto flex-grow max-h-full sm:max-h-screen">
+        <div className="w-full sm:w-1/2 flex flex-col sm:max-h-full">
           <TodoList />
           <BookList />
         </div>

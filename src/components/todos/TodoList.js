@@ -38,7 +38,7 @@ class TodoList extends Component {
     const { todos, deleteTodo, completeTodo } = this.props;
     const isTodoExists = todos && todos.length > 0;
     return (
-      <div className="list flex-1 mb-5">
+      <div className="list flex-1 mb-5 max-h-1/2 overflow-y-auto">
         <h1 className="list-title">Things to do</h1>
         <TodoInput
           value={todoText}

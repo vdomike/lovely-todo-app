@@ -6,12 +6,6 @@ module.exports = {
         main: ['Fredoka One', 'cursive']
       },
       colors: {
-        // mintBlue: '#b4e9e3',
-        // red: '#e5332f',
-        // darkGreen: '#376467',
-        // orange: '#f29a02',
-        // dirtyYellow: '#c0be14',
-        // beige: '#f0ede8',
         pink: '#ff787f',
         mintBlue: '#cee4e2',
         orange: '#ff9002',
@@ -33,6 +27,9 @@ module.exports = {
       },
       zIndex: {
         '-10': '-10'
+      },
+      maxHeight: {
+        '1/2': '50%'
       }
     }
   },

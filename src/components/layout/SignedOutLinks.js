@@ -6,7 +6,7 @@ import SplittedWord from '../common/SplittedWord';
 const SignedOutLinks = () => {
   return (
     <React.Fragment>
-      <ul className="hidden md:flex items-center text-beige text-2xl">
+      <ul className="hidden md:flex items-center text-beige text-2xl md:text-xl lg:text-2xl">
         <li className="mr-8">
           <NavLink to="/signup" className="bouncing-text">
             <SplittedWord word="Signup" />

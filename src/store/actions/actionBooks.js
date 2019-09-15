@@ -1,5 +1,3 @@
-// import { ADD_BOOK } from '../constants';
-
 export const addBook = book => {
   return (dispatch, getState, { getFirestore }) => {
     const firestore = getFirestore();
@@ -8,9 +6,6 @@ export const addBook = book => {
       ...book,
       userId: userId
     });
-    // .then(() => {
-    //   dispatch({ type: ADD_BOOK, book });
-    // });
   };
 };
 

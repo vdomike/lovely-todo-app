@@ -33,8 +33,8 @@ const Navbar = ({ auth: { uid }, profile: { firstName, lastName } }) => {
         </defs>
         <rect fill="url(#curve)" width="100%" height="29.8" />
       </svg>
-      <div className="absolute z-20 top-0 left-0 right-0 md:static flex justify-between items-center mx-auto">
-        <div className="hidden md:block brand-logo text-3xl text-white">
+      <div className="absolute z-20 top-0 left-0 right-0 md:static flex justify-between items-center mx-auto md:max-w-2xl lg:max-w-3xl xl:max-w-5xl">
+        <div className="hidden md:block brand-logo text-3xl  md:text-2xl lg:text-3xl text-white">
           <Link to="/">Girl's Todo App</Link>
         </div>
         <div className="mobile-menu-toggle relative w-full md:w-auto h-full md:h-auto">
