@@ -25,8 +25,7 @@ const enhancer = composeEnhancers(
   reduxFirestore(fbConfig),
   reactReduxFirebase(fbConfig, {
     useFirestoreForProfile: true,
-    userProfile: 'users',
-    attachAuthIsReady: true
+    userProfile: 'users'
   })
 );
 

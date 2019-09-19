@@ -1,3 +1,5 @@
+import firebase from '../../fbConfig';
+
 import {
   LOGIN_SUCCESS,
   LOGIN_ERROR,
@@ -7,8 +9,7 @@ import {
 } from '../constants';
 
 export const signIn = ({ email, password }) => {
-  return (dispatch, getState, { getFirebase }) => {
-    const firebase = getFirebase();
+  return (dispatch, getState) => {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
@@ -22,8 +23,7 @@ export const signIn = ({ email, password }) => {
 };
 
 export const signUp = ({ email, password, firstName, lastName }) => {
-  return (dispatch, getState, { getFirebase, getFirestore }) => {
-    const firebase = getFirebase();
+  return (dispatch, getState, { getFirestore }) => {
     const firestore = getFirestore();
     firebase
       .auth()
@@ -47,8 +47,7 @@ export const signUp = ({ email, password, firstName, lastName }) => {
 };
 
 export const signOut = () => {
-  return (dispatch, getState, { getFirebase }) => {
-    const firebase = getFirebase();
+  return (dispatch, getState) => {
     firebase
       .auth()
       .signOut()
