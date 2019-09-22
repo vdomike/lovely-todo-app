@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -8,16 +8,21 @@ import SplittedWord from '../common/SplittedWord';
 
 const SignedInLinks = ({ initials, signOut }) => {
   return (
-    <React.Fragment>
+    <Fragment>
       <ul className="hidden md:flex items-center text-beige text-2xl md:text-xl lg:text-2xl">
         <li className="mr-8">
-          <NavLink to="/dashboard" className="bouncing-text">
-            <SplittedWord word="Dashboard" />
+          <NavLink to="/quotes" className="bouncing-text">
+            <SplittedWord word="Quotes" />
           </NavLink>
         </li>
         <li className="mr-8">
           <NavLink to="/create-quote" className="bouncing-text">
             <SplittedWord word="New Quote" />
+          </NavLink>
+        </li>
+        <li className="mr-8">
+          <NavLink to="/dashboard" className="bouncing-text">
+            <SplittedWord word="Dashboard" />
           </NavLink>
         </li>
         <li className="mr-8">
@@ -34,10 +39,10 @@ const SignedInLinks = ({ initials, signOut }) => {
       <ul className="mobile-nav-links md:hidden text-2xl">
         <li>
           <NavLink
-            to="/dashboard"
-            className="block w-full bg-beige text-pink border-l-2 border-b-2 border-r-2 border-pink pt-4 pb-2 px-4"
+            to="/quotes"
+            className="block w-full bg-beige border-l-2 border-b-2 border-r-2 border-pink text-pink py-2 px-4"
           >
-            Dashboard
+            Quotes
           </NavLink>
         </li>
         <li>
@@ -49,6 +54,14 @@ const SignedInLinks = ({ initials, signOut }) => {
           </NavLink>
         </li>
         <li>
+          <NavLink
+            to="/dashboard"
+            className="block w-full bg-beige text-pink border-l-2 border-b-2 border-r-2 border-pink pt-4 pb-2 px-4"
+          >
+            Dashboard
+          </NavLink>
+        </li>
+        <li>
           <button
             onClick={signOut}
             className="w-full bg-beige border-l-2 border-b-2 border-r-2 border-pink text-pink py-2 px-4 text-left"
@@ -57,7 +70,7 @@ const SignedInLinks = ({ initials, signOut }) => {
           </button>
         </li>
       </ul>
-    </React.Fragment>
+    </Fragment>
   );
 };
 

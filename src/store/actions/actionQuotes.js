@@ -23,7 +23,7 @@ export const deleteQuote = id => {
   };
 };
 
-export const voteQuote = (id, votes, votedBy, userId) => {
+export const voteQuote = (id, votes, votedBy) => {
   return (dispatch, getState, { getFirestore }) => {
     const firestore = getFirestore();
     firestore

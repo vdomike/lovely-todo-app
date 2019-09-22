@@ -52,6 +52,7 @@ export const signOut = () => {
       .auth()
       .signOut()
       .then(() => {
+        firebase.logout();
         dispatch({ type: SIGNOUT_SUCCESS });
       });
   };

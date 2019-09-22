@@ -6,8 +6,11 @@ The special feature of the app is quote list where you can post quotes of famous
 
 ## App URL
 
+https://lovely-todo-app.web.app/
+
 ## Tech stack
 
 - React
+- Redux
 - Firebase
 - TailwindCSS

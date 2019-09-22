@@ -17,8 +17,8 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "build:css": "postcss src/tailwind.css -o src/index.css",
-    "watch:css": "postcss src/tailwind.css -o src/index.css -w",
+    "build:css": "postcss src/tailwind.css -o src/assets/css/index.css",
+    "watch:css": "postcss src/tailwind.css -o src/assets/css/index.css -w",
     "start": "npm-run-all --parallel watch:css start:react",
     "build": "npm-run-all build:css build:react",
     "start:react": "react-scripts start",

@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import SplittedWord from '../common/SplittedWord';
 
 const SignedOutLinks = () => {
   return (
-    <React.Fragment>
+    <Fragment>
       <ul className="hidden md:flex items-center text-beige text-2xl md:text-xl lg:text-2xl">
+        <li className="mr-8">
+          <NavLink to="/quotes" className="bouncing-text">
+            <SplittedWord word="Quotes" />
+          </NavLink>
+        </li>
         <li className="mr-8">
           <NavLink to="/signup" className="bouncing-text">
             <SplittedWord word="Signup" />
@@ -19,6 +24,14 @@ const SignedOutLinks = () => {
         </li>
       </ul>
       <ul className="mobile-nav-links md:hidden text-2xl">
+        <li>
+          <NavLink
+            to="/quotes"
+            className="block w-full bg-beige border-l-2 border-b-2 border-r-2 border-pink text-pink py-2 px-4"
+          >
+            Quotes
+          </NavLink>
+        </li>
         <li>
           <NavLink
             to="/signup"
@@ -36,7 +49,7 @@ const SignedOutLinks = () => {
           </NavLink>
         </li>
       </ul>
-    </React.Fragment>
+    </Fragment>
   );
 };
 
