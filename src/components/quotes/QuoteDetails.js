@@ -6,6 +6,7 @@ import moment from 'moment';
 
 import Tooltip from '../common/Tooltip';
 import { deleteQuote, voteQuote } from '../../store/actions/actionQuotes';
+import Loader from '../common/Loader';
 
 const QuoteDetails = ({
   id,
@@ -104,7 +105,7 @@ const QuoteDetails = ({
       </div>
     );
   } else {
-    return <div className="qoute-details">Quote loading</div>;
+    return <Loader />;
   }
 };
 
